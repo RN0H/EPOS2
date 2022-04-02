@@ -1,10 +1,9 @@
-#from epos2 import *
-#from epos2_plotter import *
+from epos2 import *
+from epos2_plotter import *
 from tkinter import*
 from tkinter.ttk import*
 import tkinter as tk
 from tkinter import ttk
-# from ttkthemes import ThemedStyle
 
 
 class driver():
@@ -12,8 +11,6 @@ class driver():
         self.master = master
         self.master.geometry("600x600")
         self.master.title("Our_Epos2_Studio")
-        # theme = ThemedStyle(self.master)
-        # theme.set_theme('radiance')
         self.configs = {
                   "nodeID":       2,            #nodeID = 2
                   "baudrate":     1000000,      #baudrate = 1000000
@@ -41,14 +38,14 @@ class driver():
     def set_parameters(self):
         try:
             if not self.wait:
-                    node2 = Epos2(**self.configs);
+                    node2 = Epos2(**self.configs);  #set the parameters
         except:
             self.flag.config(text="Error Setting Parameters or Another Process Running..")
 
     def Home(self):
         try:
             if not self.wait:
-                    node2.Homing_Mode(0)                             #Dont Home If posn==0qc else Home
+                    node2.Homing_Mode(0)       #Dont Home If posn==0qc else Home
         except:
             self.flag.config(text="Error Setting Home or Another Process Running..")
 
@@ -61,8 +58,8 @@ class driver():
 
     def signal(self):
         try:
-            if not self.wait:
-                node2.Digiin();
+            if not self.wait:   
+                node2.Digiin(); #set input to digital pin as high
         except:
             self.flag.config(text="Error in Digital Input or Another Process Running")
 
@@ -72,6 +69,7 @@ class driver():
         This is just for purpose of 
         switching modes of the Maxon Motor
         and playing with it in loop.
+        one can create a custom and try it out.
         '''
         if self.cnt.get()==0:return ""
         elif self.wait:self.flag.config(text="Please Wait")
