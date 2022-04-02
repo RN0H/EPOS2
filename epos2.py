@@ -6,7 +6,7 @@ import math
 import matplotlib.pyplot as plt
 
 # EPOS Command Library path
-path='/home/rdee/Desktop/libEposCmd.so.6.6.2.0'
+path='your_path'
 
 # Load library
 cdll.LoadLibrary(path)
