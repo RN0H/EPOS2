@@ -1,3 +1,13 @@
+ #!/usr/bin/env python3 
+# -*- coding: utf-8 -*- 
+
+#================================================
+# Author : Rohan Panicker
+# Created Date: 10/4/22
+# version ='1.0'
+#================================================
+
+
 import serial
 import time
 from ctypes import *

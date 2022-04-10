@@ -1,3 +1,12 @@
+ #!/usr/bin/env python3 
+# -*- coding: utf-8 -*- 
+
+#================================================
+# Author : Rohan Panicker
+# Created Date: 10/4/22
+# version ='1.0'
+#================================================
+
 from epos2 import *
 from epos2_plotter import *
 from tkinter import*
